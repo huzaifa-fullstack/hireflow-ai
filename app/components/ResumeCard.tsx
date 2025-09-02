@@ -13,7 +13,7 @@ const ResumeCard = ({
 
   useEffect(() => {
     const loadResume = async () => {
-      const blob = await fs.read("imagePath");
+      const blob = await fs.read(imagePath);
       if (!blob) return;
       let url = URL.createObjectURL(blob);
       setResumeURL(url);
