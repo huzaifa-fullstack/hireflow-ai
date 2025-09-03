@@ -12,6 +12,23 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { useEffect } from "react";
 
+export const meta: Route.MetaFunction = () => [
+  { charSet: "utf-8" },
+  { name: "viewport", content: "width=device-width,initial-scale=1" },
+  { title: "HireFlow AI - AI-Powered Resume Analysis" },
+  {
+    name: "description",
+    content:
+      "Analyze and improve your resume with AI-powered feedback. Get detailed insights on ATS compatibility, tone, content, structure, and skills.",
+  },
+  { name: "theme-color", content: "#1f2937" },
+  { name: "apple-mobile-web-app-capable", content: "yes" },
+  {
+    name: "apple-mobile-web-app-status-bar-style",
+    content: "black-translucent",
+  },
+];
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -23,6 +40,9 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  // Favicon and icons
+  { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+  { rel: "shortcut icon", href: "/favicon.ico" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -35,8 +55,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
