@@ -1,20 +1,28 @@
 # 🚀 HireFlow AI – AI-Powered Resume Analysis Platform
 
 ![HireFlow AI](https://img.shields.io/badge/HireFlow-AI%20Powered-blue?style=for-the-badge)
-![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178C6?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.4-06B6D4?style=for-the-badge&logo=tailwindcss)
-![Vite](https://img.shields.io/badge/Vite-6.3.3-646CFF?style=for-the-badge&logo=vite)
-![React Router](https://img.shields.io/badge/React_Router-7.7.1-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-5.0.8-2D2D2D?style=for-the-badge&logo=zustand&logoColor=white)
-![PDF.js](https://img.shields.io/badge/PDF.js-5.3.93-FFA000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-2D2D2D?style=for-the-badge&logo=zustand&logoColor=white)
+![PDF.js](https://img.shields.io/badge/PDF.js-FFA000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
+![Canvas API](https://img.shields.io/badge/Canvas_API-EF4444?style=for-the-badge)
+![Web Workers](https://img.shields.io/badge/Web_Workers-FFB020?style=for-the-badge)
+![React Dropzone](https://img.shields.io/badge/React_Dropzone-3B82F6?style=for-the-badge&logo=react&logoColor=white)
+![clsx](https://img.shields.io/badge/clsx-555555?style=for-the-badge)
+![tailwind-merge](https://img.shields.io/badge/tailwind--merge-0EA5E9?style=for-the-badge)
 ![Puter Cloud](https://img.shields.io/badge/Puter-Cloud%20Platform-FF6B6B?style=for-the-badge)
-![Canvas API](https://img.shields.io/badge/Canvas%20API-Graphics-EF4444?style=for-the-badge)
-![ES2020+](https://img.shields.io/badge/ES2020+-JS-323330?style=for-the-badge&logo=javascript)
+![Claude (Sonnet)](https://img.shields.io/badge/Claude-3.7_Sonnet-101840?style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Project Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 🌐 **Live Demo:** [Click here to visitsite](https://little-lemon-app-indol.vercel.app/)
 
@@ -83,9 +91,9 @@ Key highlights include:
 - [**PDF.js 5.3.93**](https://mozilla.github.io/pdf.js/) — Client-side PDF rendering  
 - [**Canvas API**](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) — Image processing  
 - [**Puter.js**](https://puter.com/) — Cloud auth, storage, and AI  
-- [**ES2020+ JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
-- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/HTML)  
-- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+- [**ES2020+ JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript) — Modern programming language for web development  
+- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS) — Styling language for designing web pages  
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/HTML) — Markup language for structuring web content  
 
 ---
 
