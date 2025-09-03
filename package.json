@@ -5,7 +5,9 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
+    "start": "npx serve build/client -l 3000",
+    "start:spa": "npx serve build/client -l 3000",
+    "start:ssr": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
@@ -27,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.1.4",
     "tw-animate-css": "^1.3.7",
     "typescript": "^5.8.3",
