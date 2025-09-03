@@ -43,8 +43,21 @@ const Resume = () => {
       const imageUrl = URL.createObjectURL(imageBlob);
       setImageUrl(imageUrl);
 
-      setFeedback(data.feedback);
-      console.log({ resumeUrl, imageUrl, feedback: data.feedback });
+      // Parse feedback if it's a string, otherwise use as-is
+      try {
+        const parsedFeedback =
+          typeof data.feedback === "string"
+            ? JSON.parse(data.feedback)
+            : data.feedback;
+
+        setFeedback(parsedFeedback);
+        console.log({ resumeUrl, imageUrl, feedback: parsedFeedback });
+      } catch (feedbackError) {
+        console.error("Error parsing feedback data:", feedbackError);
+        console.error("Raw feedback data:", data.feedback);
+        // Set null feedback to show loading state instead of crashing
+        setFeedback(null);
+      }
     };
 
     loadResume();
@@ -61,14 +74,14 @@ const Resume = () => {
         </Link>
       </nav>
       <div className="flex flex-row w-full max-lg:flex-col-reverse">
-        <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover h-[100vh] sticky top-0 items-center justify-center">
+        <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover min-h-screen lg:h-screen lg:sticky lg:top-0 flex items-center justify-center px-2">
           {imageUrl && resumeUrl && (
-            <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-2xl:h-fit w-fit">
+            <div className="animate-in fade-in duration-1000 w-full max-w-full sm:max-w-lg md:max-w-xl lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto">
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 <img
                   src={imageUrl}
                   alt="Resume Preview"
-                  className="w-full h-full object-contain rounded-2xl"
+                  className="w-full h-auto max-h-[85vh] lg:max-h-[85vh] object-contain"
                   title="resume"
                 />
               </a>
@@ -80,7 +93,10 @@ const Resume = () => {
           {feedback ? (
             <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
               <Summary feedback={feedback} />
-              <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
+              <ATS
+                score={feedback.ATS.score || 0}
+                suggestions={feedback.ATS.tips || []}
+              />
               <Details feedback={feedback} />
             </div>
           ) : (
