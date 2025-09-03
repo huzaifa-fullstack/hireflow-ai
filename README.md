@@ -24,7 +24,7 @@
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-🌐 **Live Demo:** [Click here to visitsite](https://little-lemon-app-indol.vercel.app/)
+🌐 **Live Demo:** [Click here to visitsite](https://hireflow-ai-nine.vercel.app/)
 
 ## **Deployed on Vercel**
 
@@ -132,29 +132,34 @@ npm run start
 
 ## 📸 Screenshots
 
+### 🔐 **Login Page**  
+![Login Page](public/screenshots/login.png)
+
+---
+
 ### 🏠 **Homepage**  
-![Homepage](public/assets/screenshots/homepage.png)
+![Homepage](public/screenshots/homepage.png)
 
 ---
 
 ### 🛠️ **Upload & Manage**  
-![Upload & Manage](public/assets/screenshots/upload.png)
+![Upload & Manage](public/screenshots/upload.png)
 
 ---
 
 ### 📋 **Resume Analysis**  
-![Resume Analysis](public/assets/screenshots/analysis.png)
+![Resume Analysis](public/screenshots/analysis.png)
 
 ---
 
 ### 📊 **Score Visualization**  
-![Score Visualization](public/assets/screenshots/gauges.png)
+![Score Visualization](public/screenshots/gauges.png)
 
 ---
 
 ## 🎥 Preview
 
-![Preview GIF](public/assets/gif/preview.gif)
+![Preview GIF](public/gif/preview.gif)
 
 ---
 
