@@ -4,20 +4,38 @@ import { formatSize } from "~/lib/utils";
 
 interface FileUploaderProps {
   onFileSelect?: (file: File | null) => void;
+  selectedFile?: File | null; // Allow parent to control selected file
 }
 
-const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
+const FileUploader = ({ onFileSelect, selectedFile: externalFile }: FileUploaderProps) => {
+  const [internalFile, setInternalFile] = useState<File | null>(null);
+  
+  // Use external file if provided, otherwise use internal state
+  const selectedFile = externalFile !== undefined ? externalFile : internalFile;
+
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       const file = acceptedFiles[0] || null;
+      if (externalFile === undefined) {
+        setInternalFile(file);
+      }
       onFileSelect?.(file);
     },
-    [onFileSelect]
+    [onFileSelect, externalFile]
   );
+
+  const handleRemoveFile = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (externalFile === undefined) {
+      setInternalFile(null);
+    }
+    onFileSelect?.(null);
+  };
 
   const maxFileSize = 20 * 1024 * 1024; // 20 MB
 
-  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
+  const { getRootProps, getInputProps, isDragActive } =
     useDropzone({
       onDrop,
       multiple: false,
@@ -25,14 +43,12 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
       maxSize: maxFileSize,
     });
 
-  const file = acceptedFiles[0] || null;
-
   return (
     <div className="w-full gradient-border">
       <div {...getRootProps()}>
         <input {...getInputProps()} />
         <div className="space-y-4 cursor-pointer">
-          {file ? (
+          {selectedFile ? (
             <div
               className="uploader-selected-file"
               onClick={(e) => e.stopPropagation()}
@@ -41,16 +57,16 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
               <div className="flex items-center space-x-3">
                 <div>
                   <p className="text-sm font-medium text-gray-700 truncate max-w-xs">
-                    {file.name}
+                    {selectedFile.name}
                   </p>
                   <p className="text-sm text-gray-500">
-                    {formatSize(file.size)}
+                    {formatSize(selectedFile.size)}
                   </p>
                 </div>
               </div>
               <button
                 className="p-2 cursor-pointer"
-                onClick={(e) => onFileSelect?.(null)}
+                onClick={handleRemoveFile}
               >
                 <img src="/icons/cross.svg" alt="Remove" className="w-4 h-4" />
               </button>
