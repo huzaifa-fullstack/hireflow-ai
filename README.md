@@ -1,87 +1,314 @@
-# Welcome to React Router!
+# 🚀 HireFlow AI – AI-Powered Resume Analysis Platform
 
-A modern, production-ready template for building full-stack React applications using React Router.
+![HireFlow AI](https://img.shields.io/badge/HireFlow-AI%20Powered-blue?style=for-the-badge)
+![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1.4-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Vite](https://img.shields.io/badge/Vite-6.3.3-646CFF?style=for-the-badge&logo=vite)
+![React Router](https://img.shields.io/badge/React_Router-7.7.1-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-5.0.8-2D2D2D?style=for-the-badge&logo=zustand&logoColor=white)
+![PDF.js](https://img.shields.io/badge/PDF.js-5.3.93-FFA000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
+![Puter Cloud](https://img.shields.io/badge/Puter-Cloud%20Platform-FF6B6B?style=for-the-badge)
+![Canvas API](https://img.shields.io/badge/Canvas%20API-Graphics-EF4444?style=for-the-badge)
+![ES2020+](https://img.shields.io/badge/ES2020+-JS-323330?style=for-the-badge&logo=javascript)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Project Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🌐 **Live Demo:** [Click here to visitsite](https://little-lemon-app-indol.vercel.app/)
 
-## Features
+## **Deployed on Vercel**
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+---
 
-## Getting Started
+## 📋 Overview
 
-### Installation
+The **HireFlow AI** platform is an **AI-powered resume analyzer** that provides **actionable feedback and ATS compatibility scoring** for job seekers.  
+It delivers a **modern, interactive experience** while ensuring security, privacy, and cross-device cloud access.
 
-Install the dependencies:
+Key highlights include:
 
+- Real-time **multi-category AI resume analysis** (ATS, Tone, Content, Structure, Skills)
+- **Animated score visualizations** and detailed improvement suggestions
+- **Drag-and-drop PDF upload** & high-quality in-browser PDF processing
+- **Secure authentication & file storage** with Puter Cloud
+- **Fast, mobile-responsive UI** built with React 19, TypeScript, Tailwind, and Vite
+- **GDPR compliant** and privacy focused by design
+
+---
+
+## 🏗️ Features
+
+### 🧠 **AI-Powered Resume Analysis**
+
+- **Overall Score Calculation** (0-100)
+- **Five Key Areas:**
+  - 🎯 ATS Compatibility
+  - 🎨 Tone & Style
+  - 📝 Content Quality
+  - 🏗️ Structure & Format
+  - ⚡ Skills Alignment
+- **Expandable Accordions** for detailed improvement tips
+
+### 📊 **Interactive Dashboard**
+
+- **SVG Score Gauges** (animated, color-coded)
+- **Progress Tracking** for multiple resumes
+- **Comparison** between versions
+
+### 🔐 **Authentication & Storage**
+
+- **Puter Cloud OAuth** secure login
+- **File Management** for resumes (PDF/image)
+- **Cross-device syncing**
+
+### 📱 **Modern UX/UI**
+
+- **Responsive design** (mobile-first)
+- **Drag & Drop upload**
+- **Real-time processing, skeleton loaders**
+- **Professional, consistent theming**
+
+---
+
+## 💻 Technologies Used
+
+- [**React 19.1.0**](https://reactjs.org/) — Modern, concurrent UI library  
+- [**TypeScript 5.8.3**](https://www.typescriptlang.org/) — Type-safe JavaScript  
+- [**Tailwind CSS 4.1.4**](https://tailwindcss.com/) — Utility-first styling  
+- [**Vite 6.3.3**](https://vitejs.dev/) — Lightning-fast builds  
+- [**React Router 7.7.1**](https://reactrouter.com/) — File-based routing  
+- [**Zustand 5.0.8**](https://zustand-demo.pmnd.rs/) — Lightweight state management  
+- [**PDF.js 5.3.93**](https://mozilla.github.io/pdf.js/) — Client-side PDF rendering  
+- [**Canvas API**](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) — Image processing  
+- [**Puter.js**](https://puter.com/) — Cloud auth, storage, and AI  
+- [**ES2020+ JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+
+---
+
+## 🚀 How to Use
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/huzaifa-fullstack/hireflow-ai.git
+cd hireflow-ai
+```
+
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+3. **Start development server**
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+4. **Open your browser**
 
-## Building for Production
+```bash
+http://localhost:5173
+```
 
-Create a production build:
-
+5. **Build for production**
 ```bash
 npm run build
+npm run start
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+## 📸 Screenshots
+
+### 🏠 **Homepage**  
+![Homepage](public/assets/screenshots/homepage.png)
+
+---
+
+### 🛠️ **Upload & Manage**  
+![Upload & Manage](public/assets/screenshots/upload.png)
+
+---
+
+### 📋 **Resume Analysis**  
+![Resume Analysis](public/assets/screenshots/analysis.png)
+
+---
+
+### 📊 **Score Visualization**  
+![Score Visualization](public/assets/screenshots/gauges.png)
+
+---
+
+## 🎥 Preview
+
+![Preview GIF](public/assets/gif/preview.gif)
+
+---
+
+## 🎨 Design System
+
+### **Color Palette**
+- **Primary:** `#1f2937` (Gray-800)
+- **Success:** `#10b981` (Emerald-500)
+- **Warning:** `#f59e0b` (Amber-500)
+- **Danger:** `#ef4444` (Red-500)
+- **Background:** Custom gradients
+
+### **Component Architecture**
+- **Atomic/Compound Components** for reusability
+- **Responsive Utilities** – Mobile-first
+- **Accessibility** – Semantic HTML, ARIA labels
+
+### **Animation System**
+- Smooth 300ms transitions
+- Skeleton screens, spinners for loading
+- Micro-interactions for engagement
+- CSS transforms for performance
+
+---
+
+## 🔒 Security & Privacy
+
+- **Client-side PDF Processing**
+- **Encrypted Cloud Storage** (Puter)
+- **No Data Mining**
+- **GDPR Compliant** (right to deletion)
+- **OAuth Flow** – Secure login
+- **Session Management** – Auto token refresh
+- **Access Control** – User-specific data
+
+---
+
+## 📈 Performance Optimizations
+
+- **Code Splitting** (route-based lazy loading)
+- **Image Optimization** (WebP, fallbacks)
+- **Bundle Analysis** (minimized JS)
+- **Caching** (Browser & CDN)
+- **Web Workers** (background PDF rendering)
+- **Error Boundaries** (UI stability)
+
+---
+
+## 🔄 Deployment & DevOps
+
+```bash
+npm run build         # Production build
+npm run typecheck     # TypeScript check
+npm run dev           # Hot reload
+```
+
+**Supported Platforms:**  
+- **Vercel** – Optimized for React Router  
+- **Self-hosted** – Node.js  
+- **Docker** – Container ready  
+
+---
+
+## 🐛 Error Handling & Debugging
+
+- **AI Failures:** Fallback to mock data
+- **Network Issues:** Retry & feedback
+- **File Errors:** User-friendly messages
+- **Auth Failures:** Secure redirects
+- **Console Logging, Error Boundaries, HMR**
+
+---
+
+## 🚧 Future Enhancements
+
+- [ ] **Multi-format Support:** Word/Plain text
+- [ ] **Batch Processing:** Multiple resumes
+- [ ] **Industry Templates:** Sector-specific
+- [ ] **Collaboration:** Share/compare resumes
+- [ ] **Advanced Analytics:** History, trends
+- [ ] **Integration APIs:** Job boards
+- [ ] **PWA:** Offline support
+- [ ] **AI Fine-tuning:** Custom models
+- [ ] **A/B Testing:** Features
+
+---
+
+## 📊 Project Metrics
+
+- **Components:** 12+ React
+- **Routes:** 5 main
+- **Types:** 20+ TypeScript
+- **Lines of Code:** 2,500+
+- **Dependencies:** 15 prod, 8 dev
+
+**Key Features:**
+-  Auth & session management
+-  Drag & drop upload
+-  PDF → Image conversion
+-  AI-powered analysis
+-  Cloud data persistence
+-  Responsive UI
+-  Robust error handling
+-  Performance optimization
+
+---
+
+## 👨‍💻 Development Journey
+
+### **Problem Identification**
+ATS optimization is a black box for most job seekers. HireFlow AI aims to make resume success measurable and improvable.
+
+### **Solution Architecture**
+- **Modern web stack** for UX
+- **Cloud + AI** for intelligence and security
+- **Mobile-first, accessible design**
+
+### **Key Challenges**
+- Reliable client-side PDF/image rendering
+- Resilient AI fallback/error handling
+- Seamless cloud integration
+- Fast, mobile UI
+
+### **Tech Decisions**
+- React Router 7
+- Puter Platform
+- End-to-end TypeScript
+- Tailwind CSS for rapid UI
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Open issues, fork, submit PRs. For major changes, please discuss first.
+
+**Workflow:**  
+1. Fork the repo  
+2. Create a branch  
+3. Commit and push  
+4. Open a PR  
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ✍️ Author
+
+**Muhammad Huzaifa Karim**  
+[GitHub Profile](https://github.com/huzaifakarim1)
+
+---
+
+## 📬 Contact
+
+Feel free to reach out if you have any questions or feedback!  
+Email: karimhuzaifa590@gmail.com
+
+---
+
+© 2025 Muhammad Huzaifa Karim
