@@ -44,14 +44,12 @@ const ResumeCard = ({
         </div>
       </div>
       {resumeURL && (
-        <div className="gradient-border animate-in fade-in duration-1000">
-          <div className="w-full h-full">
-            <img
-              src={resumeURL}
-              alt="resume"
-              className="w-full h-[350px] max-sm:h-[200px] object-cover object-top"
-            />
-          </div>
+        <div className="gradient-border animate-in fade-in duration-1000 flex-1">
+          <img
+            src={resumeURL}
+            alt="resume"
+            className="w-full h-full min-h-[250px] max-h-[350px] object-contain bg-white rounded-xl"
+          />
         </div>
       )}
     </Link>
