@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
-export const meta = () => ([
+export const meta = () => [
   { title: "HireFlow | Auth" },
   { name: "description", content: "Log into your account" },
-]);
+];
 
 const Auth = () => {
   const { isLoading, auth } = usePuterStore();
@@ -33,10 +33,7 @@ const Auth = () => {
             ) : (
               <>
                 {auth.isAuthenticated ? (
-                  <button
-                    className="auth-button"
-                    onClick={auth.signOut}
-                  >
+                  <button className="auth-button" onClick={auth.signOut}>
                     <p>Log Out</p>
                   </button>
                 ) : (
