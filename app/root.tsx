@@ -57,10 +57,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <Meta />
         <Links />
+        {/* Load Puter script in head for better reliability */}
+        <script src="https://js.puter.com/v2/" defer></script>
       </head>
       <body>
-        <script src="https://js.puter.com/v2/"></script>
-
         {children}
         <ScrollRestoration />
         <Scripts />
