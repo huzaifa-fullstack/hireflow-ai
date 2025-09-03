@@ -119,14 +119,20 @@ export const usePuterStore = create<PuterStore>((set, get) => {
   const checkAuthStatus = async (): Promise<boolean> => {
     const puter = getPuter();
     if (!puter) {
+      console.error("❌ Puter not available for auth check");
       setError("Puter.js not available");
       return false;
     }
 
+    console.log("🔐 Checking authentication status...");
     set({ isLoading: true, error: null });
 
     try {
       const isSignedIn = await puter.auth.isSignedIn();
+      console.log(
+        `🔐 Auth status: ${isSignedIn ? "✅ Signed in" : "❌ Not signed in"}`
+      );
+
       if (isSignedIn) {
         const user = await puter.auth.getUser();
         set({
@@ -242,27 +248,35 @@ export const usePuterStore = create<PuterStore>((set, get) => {
   };
 
   const init = (): void => {
+    console.log("🚀 Initializing Puter...");
+
     const puter = getPuter();
     if (puter) {
+      console.log("✅ Puter is ready!");
       set({ puterReady: true });
       checkAuthStatus();
       return;
     }
 
+    console.log("⏳ Waiting for Puter to load...");
     const interval = setInterval(() => {
-      if (getPuter()) {
+      const puter = getPuter();
+      if (puter) {
+        console.log("✅ Puter loaded successfully!");
         clearInterval(interval);
         set({ puterReady: true });
         checkAuthStatus();
       }
     }, 100);
 
+    // Extended timeout for slow connections
     setTimeout(() => {
       clearInterval(interval);
       if (!getPuter()) {
-        setError("Puter.js failed to load within 10 seconds");
+        console.error("❌ Puter.js failed to load within 15 seconds");
+        setError("Puter.js failed to load. Please refresh the page.");
       }
-    }, 10000);
+    }, 15000); // Increased to 15 seconds
   };
 
   const write = async (path: string, data: string | File | Blob) => {
